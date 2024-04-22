@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Клиника Стоматологии «НоваКлиник». Макет главной страницы сайта
+    </title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/docslide.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <section class="header__top">
+        <div class="header__brand">
+          <img src="./img/header/logo.png" alt="Логотип" class="header__logo" />
+        </div>
+        <div class="header__contact">
+          <div class="header__contact-item">
+            <img
+              src="./img/header/dental_icon.png"
+              alt=""
+              class="header__contact-icon"
+            />
+            Стоматологическая </br> клиника в Гомеле
+          </div>
+          <div class="header__contact-item">
+            <img
+              src="./img/header/place_icon.png"
+              alt=""
+              class="header__contact-icon"
+            />
+            Лепешинского ул., 3 Гомель </br> С 10.00 до 20.00
+          </div>
+          <div class="header__contact-item">
+            <img
+              src="./img/header/mobile_icon.png"
+              alt=""
+              class="header__contact-icon"
+            />
+            +375(29) 690 43 43<br />
+            Звоните по любым вопросам
+          </div>
+        </div>
+      </section>
+      <section class="header__menu">
+        <nav class="header__nav">
+          <a href="#" class="header__nav-item">Главная</a>
+          <a href="#" class="header__nav-item">Наши специалисты</a>
+          <a href="#" class="header__nav-item header__nav-item--dropdown">Услуги</a>
+          <a href="#" class="header__nav-item">Акции</a>
+          <a href="#" class="header__nav-item">Статьи</a>
+          <a href="#" class="header__nav-item">Отзывы</a>
+          <a href="#" class="header__nav-item">Контакты</a>
+        </nav>
+        <button class="header__appointment-button">Запись онлайн</button>
+      </section>
+      <section class="header__main">
+        <div class="header__title-container">
+          <h1 class="header__title">Ваша улыбка - наша гордость!</h1>
+          <p class="header__description">
+            В нашем стоматологическом центре, расположенном в Гомеле, вы найдете
+            широкий спектр высококачественных услуг по диагностике и лечению
+            зубов. Мы предлагаем комплексное обслуживание по привлекательным
+            тарифам, заботясь о здоровье вашей улыбки.
+          </p>
+          <a href="#" class="header__learn-more">Узнать больше</a>
+        </div>
+        <div class="header__image-container">
+          <img
+            src="./img/header/section_block_first.png"
+            alt="tooth_photo"
+            class="header__scene-image"
+          />
+        </div>
+      </section>
+    </header>
+    <section class="features">
+      <h2 class="features__title">Почему стоит обратиться именно к нам?</h2>
+      <div class="features__list">
+        <article class="feature">
+          <img
+            src="./img/reasons/calc.png"
+            alt="Фиксированная стоимость"
+            class="feature__icon"
+          />
+          <h3 class="feature__title">Стоимость фиксирована</h3>
+          <p class="feature__description">
+            Окончательную цену узнаете на консультации. Любые изменения будут
+            обсуждены с вами.
+          </p>
+        </article>
+        <article class="feature">
+          <img
+            src="./img/reasons/note.png"
+            alt="Без скрытых платежей"
+            class="feature__icon"
+          />
+          <h3 class="feature__title">Без лишних услуг</h3>
+          <p class="feature__description">
+            В стоимость входят плечение, материалы, все необходимые затраты.
+          </p>
+        </article>
+        <article class="feature">
+          <img src="./img/reasons/contract.png" alt="Гарантия" class="feature__icon" />
+          <h3 class="feature__title">Договор оказания услуг</h3>
+          <p class="feature__description">
+            Фиксируем обязательную ответственность и обязательства.
+          </p>
+        </article>
+      </div>
+    </section>
+    <section class="doctors">
+      <h2 class="doctors__title">Квалифицированные стоматологи</h2>
+      <p class="doctors__subtitle">
+        Помогут сохранить и вернуть здоровье вашим зубам
+      </p>
+      <div class="doctors__slider swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide doctors__thumb" 
+               data-name="Левая Алина Викторовна" 
+               data-specialty="Врач стоматолог-терапевт" 
+               data-experience="Опыт работы 10 лет" 
+               data-description="Постоянно повышаю свои знания. Использую в работе новейшие технологии и материалы. Главное качественное лечение и довольные клиенты."
+               data-education="Витебский государственный медицинский университет (стоматология) [2011 г.]"
+               data-photo="./img/doctors/Levaya.png">
+            <img class="doctors__photo" src="./img/doctors/Levaya.png" alt="Фото врача">
+            <h3 class="doctors__surname">Левая</h3>
+            <h3 class="doctors__name">Алина Викторовна</h3>
+          </div>
+    <div class="swiper-slide doctors__thumb" 
+               data-name="Новиков Сергей Игоревич" 
+               data-specialty="Врач стоматолог-хирург" 
+               data-experience="Опыт работы 12 лет" 
+               data-description="Постоянно повышаю свои знания. Использую в работе новейшие технологии и материалы. Главное качественное лечение и довольные клиенты."
+               data-education="Московский государственный медицинский университет (стоматология)
+                              [2008 г.]"
+               data-photo="./img/doctors/Novikov.png">
+            <img class="doctors__photo" src="./img/doctors/Novikov.png" alt="Фото врача">
+            <h3 class="doctors__surname">Новиков</h3>
+            <h3 class="doctors__name">Сергей Игоревич</h3>
+          </div>
+    <div class="swiper-slide doctors__thumb" 
+               data-name="Веселова София Станиславовна " 
+               data-specialty="Врач стоматолог-протезист" 
+               data-experience="Опыт работы 8 лет" 
+               data-description="Постоянно повышаю свои знания. Использую в работе новейшие технологии и материалы. Главное качественное лечение и довольные клиенты."
+               data-education="Витебский государственный медицинский университет (стоматология)
+                    [2014 г.]"
+               data-photo="./img/doctors/Veselova.png">
+            <img class="doctors__photo" src="./img/doctors/Veselova.png" alt="Фото врача">
+            
+            <h3 class="doctors__surname">Веселова</h3>
+            <h3 class="doctors__name">София Станиславовна</h3>
+          </div>
+    <div class="swiper-slide doctors__thumb" 
+               data-name="Иванова Ольга Павловна" 
+               data-specialty="Врач стоматолог-ортопед" 
+               data-experience="Опыт работы 7 лет" 
+               data-description="Постоянно повышаю свои знания. Использую в работе новейшие технологии и материалы. Главное качественное лечение и довольные клиенты."
+               data-education="Витебский государственный медицинский университет (стоматология)
+                              [2015 г.]"
+               data-photo="./img/doctors/Ivanova.png">
+            <img class="doctors__photo" src="./img/doctors/Ivanova.png" alt="Фото врача">
+            <h3 class="doctors__surname">Иванова</h3>
+            <h3 class="doctors__name">Ольга Павловна</h3>
+          </div>
+    <div class="swiper-slide doctors__thumb" 
+               data-name="Есенин Павел Валерьевич" 
+               data-specialty="Зубной фельдшер" 
+               data-experience="Опыт работы 26 лет" 
+               data-description="Постоянно повышаю свои знания. Использую в работе новейшие технологии и материалы. Главное качественное лечение и довольные клиенты."
+               data-education="Гомельское медицинское училище, специальность – «зуболечебное дело», квалификация – «зубной фельдшер» 
+                  [1996 г.]"
+               data-photo="./img/doctors/Yesenin.png">
+            <img class="doctors__photo" src="./img/doctors/Yesenin.png" alt="Фото врача">
+            <h3 class="doctors__surname">Есенин</h3>
+            <h3 class="doctors__name">Павел Валерьевич</h3>
+          </div>
+        </div>
+        <div class="swiper-button-next doctors__next"></div>
+        </div>
+    
+
+  <div class="doctors__info">
+    <div class="doctors__info-photo-container">
+
+  </div>
+    <div class="doctors__info-text-container">
+  
+  </div>
+</div>
+</section>
+<section class="clinic-services">
+  <h2 class="clinic-services__title">Наши услуги</h2>
+  <p class="clinic-services__description">Стоматологическая клиника для всей семьи. У нас можно получить бесплатную консультацию дистанционно или записаться на приём. Возможен выезд лечащего врача на дом к лежачим больным. Врачи с опытом работы более 10 лет. Новейшее оборудование и новые технологии в лечении зубов и полости рта.</p>
+  <div class="clinic-services__images">
+    <img src="./img/clinic-services/main_service.png" alt="Изображение клиники" class="clinic-services__image">
+    </div>
+    <div class="clinic-services__grid">
+      <!-- Блок проектрование -->
+      <details class="clinic-service clinic-service--design">
+        <summary class="clinic-service__summary">
+          <h3 class="clinic-service__title">Протезирование</h3>
+          <button class="clinic-service__toggle">+</button>
+        </summary>
+        <!-- Контент будет добавлен при раскрытии -->
+      </details>
+      </div>
+      <div class="services__list">
+        <details class="service">
+            <summary class="service__summary">Профилактика</summary>
+            <p class="service__content">Информация о профилактике зубов...</p>
+        </details>
+        <details class="service">
+            <summary class="service__summary">Отбеливание</summary>
+            <p class="service__content">Информация об отбеливании зубов...</p>
+        </details>
+  </section>
+  </body>
+</html>

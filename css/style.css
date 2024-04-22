@@ -1,0 +1,410 @@
+/* Глобальные стили */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+:root {
+  --swiper-navigation-size: 15px;
+  --swiper-theme-color: #011738;
+}
+
+/* Стили header */
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  max-width: 1500px;
+  max-height: 900px;
+  background-color: #fff;
+  container-type: inline-size;
+  margin-bottom: 2vw;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 1vw;
+  margin: 50px 0 40px 0;
+}
+
+.header__brand {
+  display: flex;
+  align-items: center;
+  gap: 33px;
+  margin-left: 3.2rem;
+}
+
+.header__logo {
+  width: 200px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.header__contact {
+  font-size: 0.8em;
+  gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-right: 11rem;
+}
+
+.header__contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.header__contact-icon {
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+}
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #83caf6;
+  padding: 1vw;
+}
+
+.header__nav {
+  display: flex;
+  margin-right: auto;
+}
+
+.header__nav-item {
+  text-decoration: none;
+  color: #000;
+  margin-left: 60px;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+/* Стили для псевдоэлемента, создающего стрелку вниз */
+.header__nav-item--dropdown::after {
+  content: "";
+  display: inline-block;
+  margin-left: 10px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #000;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header__appointment-button {
+  background-color: #52c98f;
+  border: 1px solid #f5f5f5;
+  border-radius: 10px;
+  padding: 12px 55px;
+  width: 254px;
+  height: 42px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  color: #fff;
+  margin-right: auto;
+}
+
+.header__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5vw;
+  flex: 1;
+}
+
+.header__title-container {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6vw;
+}
+
+.header__title {
+  color: #333;
+  margin-bottom: 20px;
+  width: 195px;
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.header__description {
+  margin-bottom: 59px;
+  line-height: 1.5;
+  color: #666;
+}
+
+.header__learn-more {
+  text-decoration: none;
+  background: #52c98f;
+  border: 1px solid #f5f5f5;
+  border-radius: 10px;
+  width: 200px;
+  height: 50px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  margin-right: auto;
+  padding: 15px 0;
+}
+
+.header__image-container {
+  flex-shrink: 0;
+  width: 584px;
+  height: 482px;
+}
+
+.header__scene-image {
+  border-radius: 20px;
+  width: 480px;
+  height: 416px;
+}
+
+/* Класс для изменения стиля кнопки при наведении */
+.header__appointment-button:hover {
+  background-color: darken(#007bff, 10%);
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 86px 101px 50px 101px;
+}
+
+.features__title {
+  margin-bottom: 3vh;
+  font-size: 2.5vh;
+  text-align: left;
+  padding: 0 4vw 50px 4vw;
+}
+
+.features__list {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 20vw;
+}
+
+.feature__icon {
+  /* Примерные размеры для иконок */
+  width: 5vw;
+  height: 5vw;
+  margin-bottom: 30px;
+}
+
+.feature__title {
+  margin-bottom: 20px;
+  font-size: 2vh;
+}
+
+.feature__description {
+  font-size: 1.5vh;
+}
+
+.doctors {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.doctors__title {
+  font-size: 2.5vh;
+  margin-bottom: 2vh;
+}
+
+.doctors__subtitle {
+  margin-bottom: 2vh;
+}
+
+.doctors__slider {
+  position: relative;
+  padding: 0 20px;
+}
+
+.doctors__photo {
+  max-width: 100%;
+  object-fit: cover;
+  transition: box-shadow 0.3s ease;
+  border-radius: 20px;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0);
+}
+
+.active-doctor {
+  border: 2px solid #bebebe;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+}
+
+.doctors__surname,
+.doctors__name {
+  font-size: 17px;
+  font-weight: bold;
+  padding: 10px 0;
+  text-wrap: balance;
+}
+
+.doctors__thumb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.doctors__info {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 30px;
+  gap: 50px;
+}
+
+.doctors__info-photo-container {
+  flex-shrink: 0;
+  width: 300px;
+}
+
+.doctors__info-photo {
+  width: 287px;
+  height: 302px;
+  border-radius: 20px;
+  border: 1px solid #bebebe;
+  margin-top: 5px;
+}
+
+.doctors__info-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.doctors__info-name {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.doctors__info-specialty,
+.doctors__info-experience,
+.doctors__info-description,
+.doctors__info-education {
+  font-size: 1em;
+}
+
+.doctors__info-appointment {
+  padding: 12px 25px;
+  background-color: #52c98f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1em;
+  margin-top: 15px;
+  align-self: start;
+}
+
+.swiper-button-next {
+  width: 25px;
+  height: 25px;
+  color: #011738;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 95px;
+}
+
+.swiper-button-next {
+  right: 1px;
+}
+
+.button:hover {
+  background-color: #3aaf7f; /* Смена цвета при наведении */
+}
+
+.clinic-services {
+  /* Стилизация основной секции */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.clinic-services__title {
+  /* Стилизация заголовка секции */
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.clinic-services__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.clinic-service {
+  background: #f8f8f8;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.clinic-service__title {
+  /* Стилизация заголовка аккордеона */
+  font-weight: bold;
+  margin: 0;
+  cursor: pointer;
+}
+
+.clinic-service__content {
+  /* Стилизация контента внутри аккордеона */
+  margin-top: 10px;
+}
+
+.clinic-service__description {
+  /* Стилизация текста описания услуги */
+  margin: 10px 0;
+}
+
+.clinic-service__button {
+  /* Стилизация кнопки */
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
