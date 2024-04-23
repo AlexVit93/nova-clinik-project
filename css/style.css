@@ -232,7 +232,7 @@ html {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0 4vw 50px 6vw;
   box-sizing: border-box;
 }
 
@@ -348,63 +348,169 @@ html {
 }
 
 .button:hover {
-  background-color: #3aaf7f; /* Смена цвета при наведении */
+  background-color: #3aaf7f;
 }
 
 .clinic-services {
-  /* Стилизация основной секции */
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0 4vw 50px 6vw;
 }
 
 .clinic-services__title {
-  /* Стилизация заголовка секции */
   font-size: 24px;
   margin-bottom: 20px;
+}
+.clinic-services__main {
+  display: flex;
+  justify-content: space-around;
+  gap: 125px;
+  margin-bottom: 50px;
+}
+.clinic-services__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  white-space: pre-wrap;
+}
+
+.clinic-services__description {
+  margin: 10px 0;
 }
 
 .clinic-services__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  margin-bottom: 20px;
 }
 
 .clinic-service {
   background: #f8f8f8;
   border: 1px solid #e1e1e1;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 15px;
 }
 
+.clinic-service__summary {
+  list-style: none; /* Убрать иконку */
+  outline: none; /* Убрать обводку при фокусе */
+  position: relative; /* Для позиционирования псевдоэлемента */
+}
+
+.clinic-service__summary::-webkit-details-marker {
+  display: none; /* Скрываем дефолтную иконку в Webkit-браузерах */
+}
+
+/* Стили для кнопки раскрытия */
+.clinic-service__toggle {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 52%;
+  right: 3px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 24px;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Скрываем дефолтный элемент "toggle" на мобильных устройствах Firefox */
+@supports (-moz-appearance: meterbar) {
+  .clinic-service__summary::marker {
+    display: none;
+  }
+}
+
+.clinic-service[open] .clinic-service__toggle {
+  transform: translateY(-50%) rotate(45deg); /* Поворачиваем '+' на 45 градусов */
+}
+
 .clinic-service__title {
-  /* Стилизация заголовка аккордеона */
+  display: inline-block;
   font-weight: bold;
   margin: 0;
-  cursor: pointer;
 }
 
 .clinic-service__content {
-  /* Стилизация контента внутри аккордеона */
-  margin-top: 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
 }
 
-.clinic-service__description {
-  /* Стилизация текста описания услуги */
-  margin: 10px 0;
+details[open] .clinic-service__content {
+  max-height: 500px;
+  padding: 20px;
+  opacity: 1;
 }
 
-.clinic-service__button {
-  /* Стилизация кнопки */
-  background-color: #007bff;
-  border: none;
-  border-radius: 4px;
+.clinic-service--dental-treatment .clinic-service__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clinic-service--dental-treatment .clinic-service__description {
+  display: flex;
+  margin-right: 20px;
+}
+
+.clinic-service--dental-treatment p {
+  max-width: 40ch;
+  white-space: pre-wrap;
+}
+
+.clinic-service--dental-treatment .clinic-service__button {
+  background-color: #52c98f;
   color: white;
+  border: none;
   padding: 10px 20px;
+  cursor: pointer;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  margin-top: 20px; /* Отступ кнопки от текста */
+  border-radius: 5px;
+}
+
+.clinic-service--dental-treatment .clinic-service__images {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.clinic-service--dental-treatment .clinic-service__image {
+  width: calc(50% - 10px); /* Вычитаем отступ между изображениями */
+  object-fit: cover; /* Чтобы изображения хорошо выглядели */
+}
+
+.clinic-service--dental-treatment .clinic-service__toggle {
+  position: absolute;
+  top: 6px;
+  right: 0px;
+  padding: 4px;
+  background: none;
+  border: none;
   cursor: pointer;
+  font-size: 24px;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Скрываем дефолтную иконку */
+.clinic-service--dental-treatment
+  .clinic-service__summary::-webkit-details-marker {
+  display: none;
+}
+
+@keyframes smoothOpen {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
