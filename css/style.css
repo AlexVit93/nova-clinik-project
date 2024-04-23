@@ -94,7 +94,6 @@ html {
   position: relative;
 }
 
-/* Стили для псевдоэлемента, создающего стрелку вниз */
 .header__nav-item--dropdown::after {
   content: "";
   display: inline-block;
@@ -180,11 +179,6 @@ html {
   height: 416px;
 }
 
-/* Класс для изменения стиля кнопки при наведении */
-.header__appointment-button:hover {
-  background-color: darken(#007bff, 10%);
-}
-
 .features {
   display: flex;
   flex-direction: column;
@@ -213,7 +207,6 @@ html {
 }
 
 .feature__icon {
-  /* Примерные размеры для иконок */
   width: 5vw;
   height: 5vw;
   margin-bottom: 30px;
@@ -393,16 +386,15 @@ html {
 }
 
 .clinic-service__summary {
-  list-style: none; /* Убрать иконку */
-  outline: none; /* Убрать обводку при фокусе */
-  position: relative; /* Для позиционирования псевдоэлемента */
+  list-style: none;
+  outline: none;
+  position: relative;
 }
 
 .clinic-service__summary::-webkit-details-marker {
-  display: none; /* Скрываем дефолтную иконку в Webkit-браузерах */
+  display: none;
 }
 
-/* Стили для кнопки раскрытия */
 .clinic-service__toggle {
   background: none;
   border: none;
@@ -415,7 +407,6 @@ html {
   transition: transform 0.2s ease-in-out;
 }
 
-/* Скрываем дефолтный элемент "toggle" на мобильных устройствах Firefox */
 @supports (-moz-appearance: meterbar) {
   .clinic-service__summary::marker {
     display: none;
@@ -423,7 +414,7 @@ html {
 }
 
 .clinic-service[open] .clinic-service__toggle {
-  transform: translateY(-50%) rotate(45deg); /* Поворачиваем '+' на 45 градусов */
+  transform: translateY(-50%) rotate(45deg);
 }
 
 .clinic-service__title {
@@ -471,7 +462,7 @@ details[open] .clinic-service__content {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin-top: 20px; /* Отступ кнопки от текста */
+  margin-top: 20px;
   border-radius: 5px;
 }
 
@@ -482,8 +473,8 @@ details[open] .clinic-service__content {
 }
 
 .clinic-service--dental-treatment .clinic-service__image {
-  width: calc(50% - 10px); /* Вычитаем отступ между изображениями */
-  object-fit: cover; /* Чтобы изображения хорошо выглядели */
+  width: calc(50% - 10px);
+  object-fit: cover;
 }
 
 .clinic-service--dental-treatment .clinic-service__toggle {
@@ -513,4 +504,119 @@ details[open] .clinic-service__content {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.promotions {
+  background: url(../img/actions/background_block.png);
+  background-repeat: repeat-x;
+  background-size: cover;
+}
+
+.promotions__items {
+  display: flex;
+  align-items: stretch;
+  padding: 0 8vw 41px 10.5vw;
+  gap: 30px;
+}
+
+.promotions__title {
+  text-align: left;
+  padding: 29px 0 50px 11.5vw;
+}
+
+.promotion {
+  margin: 1em;
+  padding: 1em;
+  border: 1px solid #000;
+}
+
+.promotion__title,
+.article__title {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.promotion__date {
+  font-size: 0.9em;
+  margin-bottom: 1em;
+}
+
+.promotion__info {
+  color: #000;
+  margin-bottom: 63px;
+}
+
+.promotion__link {
+  display: block;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 135%;
+  text-align: right;
+  color: #000;
+  text-decoration: none;
+}
+.promotion__more__link {
+  background-color: #52c98f;
+  color: white;
+  border: 1px solid #000;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 40px;
+  border-radius: 5px;
+}
+
+.articles__title {
+  text-align: left;
+  padding: 44px 0 50px 11.5vw;
+  font-weight: 600;
+  font-size: 30px;
+  color: #011738;
+}
+
+.articles__items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding: 0 9vw 0 11.5vw;
+}
+
+.articles__main {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  padding-bottom: 50px;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.article__title {
+  font-weight: 600;
+  font-size: 20px;
+  color: #011738;
+}
+
+.article__summary {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 135%;
+  color: #011738;
+}
+.articles__link {
+  font-weight: 700;
+  font-size: 17px;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #011738;
+}
+
+.article__link:hover {
+  text-decoration: underline;
 }
