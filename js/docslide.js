@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var swiper = new Swiper(".doctors__slider", {
+  let swiper = new Swiper(".doctors__slider", {
     slidesPerView: 4,
     spaceBetween: 30,
     loop: true,
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
           photo.classList.remove("active-doctor");
         });
 
-        var activePhoto =
+        let activePhoto =
           this.slides[this.activeIndex].querySelector(".doctors__photo");
         if (activePhoto) {
           activePhoto.classList.add("active-doctor");
@@ -26,18 +26,18 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function updateDoctorInfo(slide) {
-    var photoContainer = document.querySelector(
+    let photoContainer = document.querySelector(
       ".doctors__info-photo-container"
     );
-    var textContainer = document.querySelector(".doctors__info-text-container");
+    let textContainer = document.querySelector(".doctors__info-text-container");
 
     // Извлекаем данные из data-атрибутов текущего активного слайда
-    var name = slide.dataset.name;
-    var specialty = slide.dataset.specialty;
-    var experience = slide.dataset.experience;
-    var description = slide.dataset.description;
-    var education = slide.dataset.education;
-    var photoSrc = slide.dataset.photo;
+    let name = slide.dataset.name;
+    let specialty = slide.dataset.specialty;
+    let experience = slide.dataset.experience;
+    let description = slide.dataset.description;
+    let education = slide.dataset.education;
+    let photoSrc = slide.dataset.photo;
 
     // Формируем содержимое для блоков фото и текста
     photoContainer.innerHTML = `<img class="doctors__info-photo" src="${photoSrc}" alt="${name}">`;
