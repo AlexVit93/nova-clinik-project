@@ -17,7 +17,7 @@
     <header class="header">
       <section class="header__top">
         <div class="header__brand">
-          <img src="./img/header/logo.png" alt="Логотип" class="header__logo" />
+          <a href="index.html"><img src="./img/header/logo.png" alt="Логотип" class="header__logo" /></a>
         </div>
         <div class="header__contact">
           <div class="header__contact-item">
@@ -50,12 +50,12 @@
       <section class="header__menu">
         <nav class="header__nav">
           <a href="#" class="header__nav-item">Главная</a>
-          <a href="#" class="header__nav-item">Наши специалисты</a>
-          <a href="#" class="header__nav-item">Услуги</a>
-          <a href="#" class="header__nav-item">Акции</a>
-          <a href="#" class="header__nav-item">Статьи</a>
-          <a href="#" class="header__nav-item">Отзывы</a>
-          <a href="#" class="header__nav-item">Контакты</a>
+          <a href="#specialists" class="header__nav-item">Наши специалисты</a>
+          <a href="#services" class="header__nav-item">Услуги</a>
+          <a href="#actions" class="header__nav-item">Акции</a>
+          <a href="#blogs" class="header__nav-item">Статьи</a>
+          <a href="#reviews" class="header__nav-item">Отзывы</a>
+          <a href="#contacts" class="header__nav-item">Контакты</a>
         </nav>
         <button class="header__appointment-button">Запись онлайн</button>
       </section>
@@ -115,7 +115,7 @@
       </div>
     </section>
     <section class="doctors">
-      <h2 class="doctors__title">Квалифицированные стоматологи</h2>
+      <h2 class="doctors__title" id="specialists">Квалифицированные стоматологи</h2>
       <p class="doctors__subtitle">
         Помогут сохранить и вернуть здоровье вашим зубам
       </p>
@@ -184,11 +184,8 @@
         </div>
         <div class="swiper-button-next doctors__next"></div>
         </div>
-    
-
   <div class="doctors__info">
     <div class="doctors__info-photo-container">
-
   </div>
     <div class="doctors__info-text-container">
   
@@ -198,7 +195,7 @@
 <section class="clinic-services">
   <div class="clinic-services__main">
     <div class="clinic-services__text">
-    <h2 class="clinic-services__title">Наши услуги</h2>
+    <h2 class="clinic-services__title" id="services">Наши услуги</h2>
     <p class="clinic-services__description">Стоматологическая клиника для всей семьи. У нас можно получить бесплатную консультацию дистанционно или записаться на приём. Возможен выезд лечащего врача на дом к лежачим больным. Врачи с опытом работы более 10 лет. Новейшее оборудование и новые технологии в лечении зубов и полости рта.</p>
   </div> 
   <div class="clinic-services__images">
@@ -212,9 +209,7 @@
             <button class="clinic-service__toggle">+</button>
           </summary>
           <div class="clinic-service__content">
-            <p class="clinic-service__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste neque quas eaque, repellat dolor quis provident reprehenderit nemo laudantium, illo, laborum iure. Ducimus placeat est impedit sapiente autem nam molestiae?
-              Esse, voluptatum deleniti. Illo laboriosam consectetur rem odit ipsa ratione, praesentium magni aspernatur officiis quis. Non reiciendis rerum ipsum dolorem nobis ex sunt, numquam repellendus impedit ratione officia, eaque aliquid!
-              Magni possimus enim quod exercitationem odit voluptates, iure ipsam vitae harum facere eum! Sed quod et laborum eligendi similique nesciunt alias enim, quia distinctio ullam magnam placeat expedita ab iste...</p>
+            <p class="clinic-service__info">О протезировании</p>
               </div>
         </details>
         <details class="clinic-service clinic-service--orthodontics">
@@ -223,9 +218,7 @@
             <button class="clinic-service__toggle">+</button>
           </summary>
           <div class="clinic-service__content">
-            <p class="clinic-service__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste neque quas eaque, repellat dolor quis provident reprehenderit nemo laudantium, illo, laborum iure. Ducimus placeat est impedit sapiente autem nam molestiae?
-              Esse, voluptatum deleniti. Illo laboriosam consectetur rem odit ipsa ratione, praesentium magni aspernatur officiis quis. Non reiciendis rerum ipsum dolorem nobis ex sunt, numquam repellendus impedit ratione officia, eaque aliquid!
-              Magni possimus enim quod exercitationem odit voluptates, iure ipsam vitae harum facere eum! Sed quod et laborum eligendi similique nesciunt alias enim, quia distinctio ullam magnam placeat expedita ab iste...</p>
+            <p class="clinic-service__info">Об ортодонтии</p>
             </div>
         </details>
         <details class="clinic-service clinic-service--veneers">
@@ -233,9 +226,7 @@
             <button class="clinic-service__toggle">+</button>
           </summary>
           <div class="clinic-service__content">
-            <p class="clinic-service__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste neque quas eaque, repellat dolor quis provident reprehenderit nemo laudantium, illo, laborum iure. Ducimus placeat est impedit sapiente autem nam molestiae?
-              Esse, voluptatum deleniti. Illo laboriosam consectetur rem odit ipsa ratione, praesentium magni aspernatur officiis quis. Non reiciendis rerum ipsum dolorem nobis ex sunt, numquam repellendus impedit ratione officia, eaque aliquid!
-              Magni possimus enim quod exercitationem odit voluptates, iure ipsam vitae harum facere eum! Sed quod et laborum eligendi similique nesciunt alias enim, quia distinctio ullam magnam placeat expedita ab iste...</p>
+            <p class="clinic-service__info">О винирах и люмирах</p>
             </div>
         </details>
         <details class="clinic-service clinic-service--sleep-treatment">
@@ -243,9 +234,7 @@
             <button class="clinic-service__toggle">+</button>
           </summary>
           <div class="clinic-service__content">
-            <p class="clinic-service__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste neque quas eaque, repellat dolor quis provident reprehenderit nemo laudantium, illo, laborum iure. Ducimus placeat est impedit sapiente autem nam molestiae?
-              Esse, voluptatum deleniti. Illo laboriosam consectetur rem odit ipsa ratione, praesentium magni aspernatur officiis quis. Non reiciendis rerum ipsum dolorem nobis ex sunt, numquam repellendus impedit ratione officia, eaque aliquid!
-              Magni possimus enim quod exercitationem odit voluptates, iure ipsam vitae harum facere eum! Sed quod et laborum eligendi similique nesciunt alias enim, quia distinctio ullam magnam placeat expedita ab iste...</p>
+            <p class="clinic-service__info">Про лечение во сне</p>
             </div>
         </details>
         
@@ -255,9 +244,7 @@
             <button class="clinic-service__toggle">+</button>
           </summary>
           <div class="clinic-service__content">
-            <p class="clinic-service__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste neque quas eaque, repellat dolor quis provident reprehenderit nemo laudantium, illo, laborum iure. Ducimus placeat est impedit sapiente autem nam molestiae?
-              Esse, voluptatum deleniti. Illo laboriosam consectetur rem odit ipsa ratione, praesentium magni aspernatur officiis quis. Non reiciendis rerum ipsum dolorem nobis ex sunt, numquam repellendus impedit ratione officia, eaque aliquid!
-              Magni possimus enim quod exercitationem odit voluptates, iure ipsam vitae harum facere eum! Sed quod et laborum eligendi similique nesciunt alias enim, quia distinctio ullam magnam placeat expedita ab iste...</p>
+            <p class="clinic-service__info">Про чистку и отбеливание</p>
             </div>
         </details>
         <details class="clinic-service clinic-service--restoration">
@@ -265,9 +252,7 @@
             <button class="clinic-service__toggle">+</button>
           </summary>
           <div class="clinic-service__content">
-            <p class="clinic-service__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste neque quas eaque, repellat dolor quis provident reprehenderit nemo laudantium, illo, laborum iure. Ducimus placeat est impedit sapiente autem nam molestiae?
-              Esse, voluptatum deleniti. Illo laboriosam consectetur rem odit ipsa ratione, praesentium magni aspernatur officiis quis. Non reiciendis rerum ipsum dolorem nobis ex sunt, numquam repellendus impedit ratione officia, eaque aliquid!
-              Magni possimus enim quod exercitationem odit voluptates, iure ipsam vitae harum facere eum! Sed quod et laborum eligendi similique nesciunt alias enim, quia distinctio ullam magnam placeat expedita ab iste...</p>
+            <p class="clinic-service__info">Про реставрацию и восстановление</p>
             </div>
         </details>
         <details class="clinic-service clinic-service--extraction">
@@ -275,9 +260,7 @@
             <button class="clinic-service__toggle">+</button>
           </summary>
           <div class="clinic-service__content">
-            <p class="clinic-service__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste neque quas eaque, repellat dolor quis provident reprehenderit nemo laudantium, illo, laborum iure. Ducimus placeat est impedit sapiente autem nam molestiae?
-              Esse, voluptatum deleniti. Illo laboriosam consectetur rem odit ipsa ratione, praesentium magni aspernatur officiis quis. Non reiciendis rerum ipsum dolorem nobis ex sunt, numquam repellendus impedit ratione officia, eaque aliquid!
-              Magni possimus enim quod exercitationem odit voluptates, iure ipsam vitae harum facere eum! Sed quod et laborum eligendi similique nesciunt alias enim, quia distinctio ullam magnam placeat expedita ab iste...</p>
+            <p class="clinic-service__info">Про удаление зубов</p>
             </div>
         </details>
         <details class="clinic-service clinic-service--implantation">
@@ -285,9 +268,7 @@
             <button class="clinic-service__toggle">+</button>
           </summary>
           <div class="clinic-service__content">
-            <p class="clinic-service__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste neque quas eaque, repellat dolor quis provident reprehenderit nemo laudantium, illo, laborum iure. Ducimus placeat est impedit sapiente autem nam molestiae?
-              Esse, voluptatum deleniti. Illo laboriosam consectetur rem odit ipsa ratione, praesentium magni aspernatur officiis quis. Non reiciendis rerum ipsum dolorem nobis ex sunt, numquam repellendus impedit ratione officia, eaque aliquid!
-              Magni possimus enim quod exercitationem odit voluptates, iure ipsam vitae harum facere eum! Sed quod et laborum eligendi similique nesciunt alias enim, quia distinctio ullam magnam placeat expedita ab iste...</p>
+            <p class="clinic-service__info">Про имплантацию</p>
             </div>
         </details>
       </div>
@@ -310,7 +291,7 @@
       </details>
     </section>
     <section class="promotions">
-      <h2 class="promotions__title">Акции и новости клиники</h2>
+      <h2 class="promotions__title" id="actions">Акции и новости клиники</h2>
       <div class="promotions__items">
           <article class="promotion">
               <h3 class="promotion__title">Работа в праздники</h3>
@@ -323,7 +304,7 @@
               <h3 class="promotion__title">Новая акция</h3>
               <p class="promotion__date">15.12.2021</p>
               <p class="promotion__info">С 3 по 27 января действуют скидки на коронки из металло-керамики. На каждую вторую скидка 10 %</p>
-              <button class="promotion__more__link">Узнать больше</button>
+              <button class="promotion__more__link" id="openModal">Узнать больше</button>
           </article>
           <article class="promotion">
               <h3 class="promotion__title">Награда за помощь людям с ограниченными возможностями</h3>
@@ -335,7 +316,7 @@
   </section>
   
   <section class="articles">
-      <h2 class="articles__title">Статьи</h2>
+      <h2 class="articles__title" id="blogs">Статьи</h2>
       <div class="articles__items">
         <div class="articles__main">
         <div class="article__photo">
@@ -378,7 +359,7 @@
   </div>
 </section>
 <section class="testimonials">
-  <h2 class="testimonials__title">Отзывы наших клиентов</h2>
+  <h2 class="testimonials__title" id="reviews">Отзывы наших клиентов</h2>
   <div class="testimonials__slider slick-slider">
     <div class="slick-slide">
       <div class="testimonial">
@@ -464,7 +445,7 @@
 </div>
 </section>
 <section class="contact">
-  <h2 class="contact__title">Остались вопросы? Или хотите оставить отзыв?
+  <h2 class="contact__title" id="contacts">Остались вопросы? Или хотите оставить отзыв?
   Заполните форму обратной связи и мы обязательно ответим!</h2>
   <div class="contact__prompt">
     <div class="contact_anim">
@@ -472,7 +453,7 @@
     </div>
   
   
-  <form class="contact__form" id="contactForm" onsubmit="return validateForm()">
+  <form class="contact__form" id="contactForm">
       <input type="text" id="name" placeholder="Ваше имя" required>
       <input type="email" id="email" placeholder="Ваш e-mail" required>
       <textarea id="message" placeholder="Ваш вопрос или отзыв" required></textarea>
@@ -540,7 +521,7 @@
     <span class="footer__title">Связаться с нами</span>
     <a href="tel:+3752569043" class="footer__link"><img src="./img/sm-icons/phone.png" alt="phone" class="footer__link--phone">+375 (25) 690 43 43</a>
     <a href="mailto:nova_klinik.dental@gmail.com" class="footer__link"><img src="./img/sm-icons/letter.png" alt="mail" class="footer__link--mail">nova_klinik.dental@gmail.com</a>
-    <span class="footer__title--contact-us">Присоединиться к нам</span>
+    <span class="footer__title--contact-us">Присоединяйтесь к нам</span>
     <div class="footer__socials">
       <a href="#" class="footer__social-link icon"><img src="./img/sm-icons/vk.png" alt="vk"></a>
       <a href="#" class="footer__social-link icon"><img src="./img/sm-icons/fb.png" alt="fb"></a>
@@ -551,12 +532,7 @@
     <div class="footer__bottom-line">
         <p>2024 Все права защищены</p>
     </div>
-  </footer>
-  
-  
-  
-
-
+  </footer>  
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>

@@ -4,10 +4,14 @@ function validateForm() {
     alert("Вы должны согласиться на обработку персональных данных.");
     return false;
   }
+  return true;
 }
+
 document
   .getElementById("contactForm")
   .addEventListener("submit", function (event) {
     event.preventDefault();
-    validateForm();
+    if (validateForm()) {
+      alert("Сообщение было отправлено. Спасибо!");
+    }
   });

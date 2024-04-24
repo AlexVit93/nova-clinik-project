@@ -1,3 +1,52 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Regular.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-SemiBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../fonts/NotoSans-Regular.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
 /* Глобальные стили */
 * {
   box-sizing: border-box;
@@ -17,19 +66,22 @@ html {
 :root {
   --swiper-navigation-size: 15px;
   --swiper-theme-color: #011738;
+  --font-family: "Montserrat", sans-serif;
+  --second-family: "Inter", sans-serif;
+  --third-family: "Noto Sans", sans-serif;
 }
 
-/* Стили header */
+/* Стили секции header */
 .header {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   max-width: 1500px;
   max-height: 900px;
   background-color: #fff;
   container-type: inline-size;
-  margin-bottom: 2vw;
+  margin-bottom: 42vh;
 }
 
 .header__top {
@@ -39,6 +91,8 @@ html {
   background-color: #ffffff;
   padding: 1vw;
   margin: 50px 0 40px 0;
+  white-space: nowrap;
+  gap: 6vw;
 }
 
 .header__brand {
@@ -66,6 +120,11 @@ html {
   display: flex;
   align-items: center;
   margin-bottom: 5px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 135%;
+  color: #000;
 }
 
 .header__contact-icon {
@@ -88,10 +147,13 @@ html {
 
 .header__nav-item {
   text-decoration: none;
-  color: #000;
   margin-left: 60px;
-  font-size: 0.9rem;
   position: relative;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 135%;
+  color: #000;
 }
 
 .header__appointment-button {
@@ -126,17 +188,23 @@ html {
 }
 
 .header__title {
-  color: #333;
   margin-bottom: 20px;
-  width: 195px;
   white-space: pre-wrap;
   line-height: 1.5;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 50px;
+  color: #000;
 }
 
 .header__description {
   margin-bottom: 59px;
   line-height: 1.5;
   color: #666;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  color: #000;
 }
 
 .header__learn-more {
@@ -158,15 +226,16 @@ html {
 .header__image-container {
   flex-shrink: 0;
   width: 584px;
-  height: 482px;
+  height: 500px;
 }
 
 .header__scene-image {
   border-radius: 20px;
-  width: 480px;
-  height: 416px;
+  width: 500px;
+  height: 440px;
 }
 
+/* Стили секции features */
 .features {
   display: flex;
   flex-direction: column;
@@ -176,9 +245,12 @@ html {
 
 .features__title {
   margin-bottom: 3vh;
-  font-size: 2.5vh;
   text-align: left;
   padding: 0 4vw 50px 4vw;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 30px;
+  color: #011738;
 }
 
 .features__list {
@@ -202,13 +274,23 @@ html {
 
 .feature__title {
   margin-bottom: 20px;
-  font-size: 2vh;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 25px;
+  color: #011738;
+  white-space: nowrap;
 }
 
 .feature__description {
-  font-size: 1.5vh;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 135%;
+  text-align: center;
+  color: #011738;
 }
 
+/* Стили секции doctors */
 .doctors {
   width: 100%;
   max-width: 1200px;
@@ -218,12 +300,22 @@ html {
 }
 
 .doctors__title {
-  font-size: 2.5vh;
   margin-bottom: 2vh;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 30px;
+  text-align: left;
+  color: #011738;
 }
 
 .doctors__subtitle {
   margin-bottom: 2vh;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 135%;
+  text-align: left;
+  color: #011738;
 }
 
 .doctors__slider {
@@ -247,10 +339,13 @@ html {
 
 .doctors__surname,
 .doctors__name {
-  font-size: 17px;
-  font-weight: bold;
   padding: 10px 0;
   text-wrap: balance;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 17px;
+  text-align: center;
+  color: #011738;
 }
 
 .doctors__thumb {
@@ -332,6 +427,7 @@ html {
   background-color: #3aaf7f;
 }
 
+/* Стили секции clinic-services */
 .clinic-services {
   max-width: 1200px;
   margin: 0 auto;
@@ -339,8 +435,11 @@ html {
 }
 
 .clinic-services__title {
-  font-size: 24px;
   margin-bottom: 20px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 30px;
+  color: #011738;
 }
 .clinic-services__main {
   display: flex;
@@ -357,6 +456,11 @@ html {
 
 .clinic-services__description {
   margin: 10px 0;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 135%;
+  color: #011738;
 }
 
 .clinic-services__grid {
@@ -407,8 +511,11 @@ html {
 
 .clinic-service__title {
   display: inline-block;
-  font-weight: bold;
   margin: 0;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  color: #011738;
 }
 
 .clinic-service__content {
@@ -438,6 +545,11 @@ details[open] .clinic-service__content {
 .clinic-service--dental-treatment p {
   max-width: 40ch;
   white-space: pre-wrap;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 135%;
+  color: #011738;
 }
 
 .clinic-service--dental-treatment .clinic-service__button {
@@ -477,7 +589,6 @@ details[open] .clinic-service__content {
   transition: transform 0.2s ease-in-out;
 }
 
-/* Скрываем дефолтную иконку */
 .clinic-service--dental-treatment
   .clinic-service__summary::-webkit-details-marker {
   display: none;
@@ -494,6 +605,7 @@ details[open] .clinic-service__content {
   }
 }
 
+/* Стили секции promotions */
 .promotions {
   background: url(../img/actions/background_block.png);
   background-repeat: repeat-x;
@@ -557,6 +669,8 @@ details[open] .clinic-service__content {
   border-radius: 5px;
 }
 
+/* Стили секции articles */
+
 .articles__title {
   text-align: left;
   padding: 44px 0 50px 11.5vw;
@@ -609,6 +723,8 @@ details[open] .clinic-service__content {
   text-decoration: underline;
 }
 
+/* Стили секции testimonials */
+
 .testimonials {
   text-align: left;
   position: relative;
@@ -617,6 +733,10 @@ details[open] .clinic-service__content {
 .testimonials__title {
   margin-bottom: 1em;
   padding: 49px 0 58px 11.5vw;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 30px;
+  color: #011738;
 }
 
 .testimonials__slider {
@@ -686,6 +806,8 @@ details[open] .clinic-service__content {
   right: 10px;
 }
 
+/* Стили секции contact */
+
 .contact {
   display: flex;
   flex-direction: column;
@@ -750,6 +872,11 @@ details[open] .clinic-service__content {
   margin-bottom: 20px;
   word-wrap: break-word;
   max-width: 50%;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 135%;
+  color: #000;
 }
 
 .contact__form label input[type="checkbox"] {
@@ -780,7 +907,7 @@ details[open] .clinic-service__content {
   border-radius: 5px;
   text-align: center;
   gap: 60px;
-  margin: 50px 47px 50px 8vw;
+  margin: 50px 47px 50px 4vw;
 }
 
 .contact__main {
@@ -792,6 +919,10 @@ details[open] .clinic-service__content {
 .contact__info-title {
   text-align: left;
   margin-bottom: 20px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 30px;
+  color: #000;
 }
 
 .contact__main img {
@@ -814,13 +945,20 @@ details[open] .clinic-service__content {
 .contact__address,
 .contact__station,
 .contact__hours {
-  font-weight: bold;
   margin: 0;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  color: #000;
 }
 
 .contact__descr {
   margin: 0;
-  font-size: 0.9em;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 135%;
+  color: #000;
 }
 
 .contact__map {
@@ -833,10 +971,12 @@ details[open] .clinic-service__content {
   margin-bottom: 1rem;
 }
 
+/* Стили секции footer */
+
 .footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 10px;
   padding: 20px;
   font-size: 14px;
 }
@@ -858,17 +998,27 @@ details[open] .clinic-service__content {
   margin: 0 0 0 6vw;
 }
 .footer__title {
-  font-weight: bold;
   margin-bottom: 30px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  color: #011738;
 }
 .footer__title--contact-us {
-  font-weight: bold;
   margin-top: 50px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  color: #011738;
 }
 .footer__link {
   margin-bottom: 5px;
-  color: #000;
   text-decoration: none;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 135%;
+  color: #011738;
 }
 .footer__link--phone,
 .footer__link--mail {
@@ -901,7 +1051,7 @@ details[open] .clinic-service__content {
   bottom: 2rem;
   right: 2rem;
   border: none;
-  background: white;
+  background: none;
   padding: 0.5rem 0.7rem;
   cursor: pointer;
   display: none;

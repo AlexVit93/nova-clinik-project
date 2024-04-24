@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <h3 class="doctors__info-experience">${experience}</h3>
       <p class="doctors__info-description">${description}</p>
       <p class="doctors__info-education">${education}</p>
-      <button class="doctors__info-appointment button">Запись к врачу</button>
+      <button class="doctors__info-appointment button" id="openModal">Запись к врачу</button>
     `;
   }
 
