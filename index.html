@@ -51,7 +51,7 @@
         <nav class="header__nav">
           <a href="#" class="header__nav-item">Главная</a>
           <a href="#" class="header__nav-item">Наши специалисты</a>
-          <a href="#" class="header__nav-item header__nav-item--dropdown">Услуги</a>
+          <a href="#" class="header__nav-item">Услуги</a>
           <a href="#" class="header__nav-item">Акции</a>
           <a href="#" class="header__nav-item">Статьи</a>
           <a href="#" class="header__nav-item">Отзывы</a>
@@ -464,70 +464,97 @@
 </div>
 </section>
 <section class="contact">
-  <h2 class="contact__title">Остались вопросы? Или хотите оставить отзыв?</h2>
-  <p class="contact__prompt">Заполните форму обратной связи и мы обязательно ответим!</p>
+  <h2 class="contact__title">Остались вопросы? Или хотите оставить отзыв?
+  Заполните форму обратной связи и мы обязательно ответим!</h2>
+  <div class="contact__prompt">
+    <div class="contact_anim">
+      <img src="./img/contacts/anim.gif" alt="Animation">
+    </div>
+  
   
   <form class="contact__form" id="contactForm" onsubmit="return validateForm()">
       <input type="text" id="name" placeholder="Ваше имя" required>
       <input type="email" id="email" placeholder="Ваш e-mail" required>
       <textarea id="message" placeholder="Ваш вопрос или отзыв" required></textarea>
-      <label for="consent">
+      <div class="contact__form-group">
+      <label for="consent" class="contact__consent">
           <input type="checkbox" id="consent" required>
           Согласен на обработку персональных данных
       </label>
       <button type="submit" class="contact__submit">Задать вопрос</button>
+    </div>
   </form>
 
+</div>
   <div class="contact__info">
+    <div class="contact__main">
       <h3 class="contact__info-title">Адрес и контакты</h3>
+      <div class="contact__item">
+      <img src="./img/contacts/place.png" alt="street">
+      <div class="contact__text">
       <p class="contact__address">Лепешинского ул., 3, Г. Гомель</p>
-      <p class="contact__station">Остановка "Центр Стандартизации"</p>
-      <p class="contact__hours">Время работы: с 10:00 до 20:00</p>
+      <p class="contact__descr">Вход со двора. Пять минут хотьбы от автобусной остановки</p>
+    </div>
+  </div>
+  <div class="contact__item">
+      <img src="./img/contacts/bus.png" alt="bus">
+      <div class="contact__text">
+      <p class="contact__station">Остановка "Центр Стандартизации"</p><p class="contact__descr">Автобусы 3, 25А, 36А, 74</p>
+    </div>
+  </div>
+  <div class="contact__item">
+      <img src="./img/contacts/clock.png" alt="clock">
+      <div class="contact__text">
+      <p class="contact__hours">Время работы</p><p class="contact__descr">С 11.00 до 20.00
+        Без выходных</p>
+        </div>
+      </div>
+    </div>
+    <div class="contact__map">
       <img src="./img/contacts/map.png" alt="Мы на карте">
+    </div>
   </div>
 </section>
+<div class="prefooter__top-line"></div>
 <footer class="footer">
-  <div class="footer__top-line"></div>
-  <div class="footer__content">
-      <div class="footer__block">
-          <img src="./img/header/logo.png" alt="Логотип" class="footer__logo">
-          <p class="footer__text">Ваша улыбка - наша гордость!</p>
-      </div>
-      <div class="footer__block">
-          <h4 class="footer__heading">О нас</h4>
-          <ul class="footer__list">
-              <li><a href="#">Наши услуги</a></li>
-              <li><a href="#">Наши специалисты</a></li>
-              <li><a href="#">Контакты</a></li>
-              <li><a href="#">Галерея</a></li>
-              <li><a href="#">Отзывы</a></li>
-          </ul>
-      </div>
-      <div class="footer__block">
-          <h4 class="footer__heading">Информация</h4>
-          <ul class="footer__list">
-              <li><a href="#">Акции</a></li>
-              <li><a href="#">Новости</a></li>
-              <li><a href="#">Блог</a></li>
-              <li><a href="#">Задать вопрос</a></li>
-          </ul>
-      </div>
-      <div class="footer__block">
-          <h4 class="footer__heading">Связаться с нами</h4>
-          <p>+375 (29) 690 43 43</p>
-          <p>nova_klinik_dental@gmail.com</p>
-      </div>
-      <div class="footer__block footer__socials">
-          <a href="#" class="footer__social-link">VK</a>
-          <a href="#" class="footer__social-link">Facebook</a>
-          <a href="#" class="footer__social-link">Instagram</a>
-      </div>
+  <div class="footer__column">
+    <span class="footer__logo"><img src="./img/header/logo.png" alt="Логотип"></span>
+    <span class="footer__motto">Ваша улыбка - наша гордость!</span>
   </div>
-  <button id="backToTop" class="back-to-top" onclick="window.scrollTo(0,0);">↑</button>
-  <div class="footer__bottom-line">
-      <p>2024 Все права защищены</p>
+  <div class="footer__column">
+    <span class="footer__title">О нас</span>
+    <a href="#" class="footer__link">Наши услуги</a>
+    <a href="#" class="footer__link">Наши специалисты</a>
+    <a href="#" class="footer__link">Контакты</a>
+    <a href="#" class="footer__link">Галерея</a>
+    <a href="#" class="footer__link">Отзывы</a>
   </div>
-</footer>
+  <div class="footer__column">
+    <span class="footer__title">Информация</span>
+    <a href="#" class="footer__link">Акции</a>
+    <a href="#" class="footer__link">Новости</a>
+    <a href="#" class="footer__link">Блог</a>
+    <a href="#" class="footer__link">Задать вопрос</a>
+  </div>
+  <div class="footer__column">
+    <span class="footer__title">Связаться с нами</span>
+    <a href="tel:+3752569043" class="footer__link"><img src="./img/sm-icons/phone.png" alt="phone" class="footer__link--phone">+375 (25) 690 43 43</a>
+    <a href="mailto:nova_klinik.dental@gmail.com" class="footer__link"><img src="./img/sm-icons/letter.png" alt="mail" class="footer__link--mail">nova_klinik.dental@gmail.com</a>
+    <span class="footer__title--contact-us">Присоединиться к нам</span>
+    <div class="footer__socials">
+      <a href="#" class="footer__social-link icon"><img src="./img/sm-icons/vk.png" alt="vk"></a>
+      <a href="#" class="footer__social-link icon"><img src="./img/sm-icons/fb.png" alt="fb"></a>
+      <a href="#" class="footer__social-link icon"><img src="./img/sm-icons/inst.png" alt="instagram"></a>
+    </div>
+    </div>
+    <button id="backToTop" class="back-to-top" onclick="window.scrollTo(0,0);"><img src="./img/sm-icons/ArrowUp.png" alt="Up"></button>
+    <div class="footer__bottom-line">
+        <p>2024 Все права защищены</p>
+    </div>
+  </footer>
+  
+  
+  
 
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -535,6 +562,7 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
 <script src="./js/docslide.js"></script>
 <script src="./js/testimonial.js"></script>
+<script src="./js/validate.js"></script>
 <script>
   window.addEventListener('scroll', function() {
     var footer = document.querySelector('.footer');
