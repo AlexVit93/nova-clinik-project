@@ -6,6 +6,7 @@
     <title>
       Клиника Стоматологии «НоваКлиник». Макет главной страницы сайта
     </title>
+    <link type="image/x-icon" href="./img/header/favicon.ico" rel="shortcut icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
@@ -14,6 +15,15 @@
    
   </head>
   <body>
+    <!-- Блок всплывающего окна при нажатии по кнопке -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <p>Для получения дополнительной информации позвоните по номеру +375(25) 690 43 43 в рабочее время.</p>
+        <button class="modal-ok-button">OK, Все понятно! 👍</button>
+      </div>
+    </div>
+
+    <!-- Шапка сайта -->
     <header class="header">
       <section class="header__top">
         <div class="header__brand">
@@ -57,7 +67,7 @@
           <a href="#reviews" class="header__nav-item">Отзывы</a>
           <a href="#contacts" class="header__nav-item">Контакты</a>
         </nav>
-        <button class="header__appointment-button">Запись онлайн</button>
+        <button class="header__appointment-button open-modal-button">Запись онлайн</button>
       </section>
       <section class="header__main">
         <div class="header__title-container">
@@ -79,6 +89,7 @@
         </div>
       </section>
     </header>
+    <!-- Секция о наших преимуществах -->
     <section class="features">
       <h2 class="features__title">Почему стоит обратиться именно к нам?</h2>
       <div class="features__list">
@@ -114,6 +125,7 @@
         </article>
       </div>
     </section>
+    <!-- Секция врачей -->
     <section class="doctors">
       <h2 class="doctors__title" id="specialists">Квалифицированные стоматологи</h2>
       <p class="doctors__subtitle">
@@ -184,6 +196,7 @@
         </div>
         <div class="swiper-button-next doctors__next"></div>
         </div>
+        <!-- Обработка и вывод датасета с врачами -->
   <div class="doctors__info">
     <div class="doctors__info-photo-container">
   </div>
@@ -192,6 +205,7 @@
   </div>
 </div>
 </section>
+<!-- Секция сервисов клиники -->
 <section class="clinic-services">
   <div class="clinic-services__main">
     <div class="clinic-services__text">
@@ -290,6 +304,7 @@
         </div>
       </details>
     </section>
+    <!-- Секция акций и новостей клиники -->
     <section class="promotions">
       <h2 class="promotions__title" id="actions">Акции и новости клиники</h2>
       <div class="promotions__items">
@@ -304,7 +319,7 @@
               <h3 class="promotion__title">Новая акция</h3>
               <p class="promotion__date">15.12.2021</p>
               <p class="promotion__info">С 3 по 27 января действуют скидки на коронки из металло-керамики. На каждую вторую скидка 10 %</p>
-              <button class="promotion__more__link" id="openModal">Узнать больше</button>
+              <button class="promotion__more__link">Узнать больше</button>
           </article>
           <article class="promotion">
               <h3 class="promotion__title">Награда за помощь людям с ограниченными возможностями</h3>
@@ -314,7 +329,7 @@
           </article>
       </div>
   </section>
-  
+  <!-- Секция полезной информации о клинике -->
   <section class="articles">
       <h2 class="articles__title" id="blogs">Статьи</h2>
       <div class="articles__items">
@@ -358,6 +373,7 @@
   </div>
   </div>
 </section>
+<!-- Секция отзывов наших клиентов -->
 <section class="testimonials">
   <h2 class="testimonials__title" id="reviews">Отзывы наших клиентов</h2>
   <div class="testimonials__slider slick-slider">
@@ -444,6 +460,7 @@
     </button>
 </div>
 </section>
+<!-- Секция блока контактной информации с формой обратной связи и анимацией -->
 <section class="contact">
   <h2 class="contact__title" id="contacts">Остались вопросы? Или хотите оставить отзыв?
   Заполните форму обратной связи и мы обязательно ответим!</h2>
@@ -451,8 +468,6 @@
     <div class="contact_anim">
       <img src="./img/contacts/anim.gif" alt="Animation">
     </div>
-  
-  
   <form class="contact__form" id="contactForm">
       <input type="text" id="name" placeholder="Ваше имя" required>
       <input type="email" id="email" placeholder="Ваш e-mail" required>
@@ -465,7 +480,6 @@
       <button type="submit" class="contact__submit">Задать вопрос</button>
     </div>
   </form>
-
 </div>
   <div class="contact__info">
     <div class="contact__main">
@@ -496,6 +510,7 @@
     </div>
   </div>
 </section>
+<!-- Секция подвала сайта и ссылок на разделы сайта -->
 <div class="prefooter__top-line"></div>
 <footer class="footer">
   <div class="footer__column">
@@ -504,18 +519,17 @@
   </div>
   <div class="footer__column">
     <span class="footer__title">О нас</span>
-    <a href="#" class="footer__link">Наши услуги</a>
-    <a href="#" class="footer__link">Наши специалисты</a>
-    <a href="#" class="footer__link">Контакты</a>
-    <a href="#" class="footer__link">Галерея</a>
-    <a href="#" class="footer__link">Отзывы</a>
+    <a href="#services" class="footer__link">Наши услуги</a>
+    <a href="#specialists" class="footer__link">Наши специалисты</a>
+    <a href="#contacts" class="footer__link">Контакты</a>
+    <a href="#reviews" class="footer__link">Отзывы</a>
   </div>
   <div class="footer__column">
     <span class="footer__title">Информация</span>
-    <a href="#" class="footer__link">Акции</a>
-    <a href="#" class="footer__link">Новости</a>
-    <a href="#" class="footer__link">Блог</a>
-    <a href="#" class="footer__link">Задать вопрос</a>
+    <a href="#actions" class="footer__link">Акции</a>
+    <a href="#actions" class="footer__link">Новости</a>
+    <a href="#blogs" class="footer__link">Блог</a>
+    <a href="#contacts" class="footer__link">Задать вопрос</a>
   </div>
   <div class="footer__column">
     <span class="footer__title">Связаться с нами</span>
@@ -539,6 +553,7 @@
 <script src="./js/docslide.js"></script>
 <script src="./js/testimonial.js"></script>
 <script src="./js/validate.js"></script>
+<script src="./js/modal.js" defer></script>
 <script>
   window.addEventListener('scroll', function() {
     var footer = document.querySelector('.footer');
