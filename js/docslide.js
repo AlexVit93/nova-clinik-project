@@ -1,12 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
   let swiper = new Swiper(".doctors__slider", {
-    slidesPerView: 4,
+    slidesPerView: 2,
     spaceBetween: 30,
     loop: true,
     slidesPerGroup: 1,
     navigation: {
       nextEl: ".doctors__next",
       prevEl: ".doctors__prev",
+    },
+    breakpoints: {
+      1300: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
     },
     on: {
       slideChange: function () {

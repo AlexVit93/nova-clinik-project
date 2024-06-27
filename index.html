@@ -8,10 +8,11 @@
     </title>
     <link type="image/x-icon" href="./img/header/favicon.ico" rel="shortcut icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="./libs/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./libs/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./libs/slick-theme.css"/>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css">
    
   </head>
   <body>
@@ -466,7 +467,7 @@
   Заполните форму обратной связи и мы обязательно ответим!</h2>
   <div class="contact__prompt">
     <div class="contact_anim">
-      <img src="./img/contacts/anim.gif" alt="Animation">
+      <img src="./img/contacts/anim.gif" alt="Animation" class="contact_anim__image">
     </div>
   <form class="contact__form" id="contactForm">
       <input type="text" id="name" placeholder="Ваше имя" required>
@@ -506,13 +507,14 @@
       </div>
     </div>
     <div class="contact__map">
-      <img src="./img/contacts/map.png" alt="Мы на карте">
+      <img src="./img/contacts/map.png" alt="Мы на карте" class="contact__map_image">
     </div>
   </div>
 </section>
 <!-- Секция подвала сайта и ссылок на разделы сайта -->
 <div class="prefooter__top-line"></div>
 <footer class="footer">
+  <div class="footer__cont">
   <div class="footer__column">
     <span class="footer__logo"><img src="./img/header/logo.png" alt="Логотип"></span>
     <span class="footer__motto">Ваша улыбка - наша гордость!</span>
@@ -546,10 +548,11 @@
     <div class="footer__bottom-line">
         <p>2024 Все права защищены</p>
     </div>
+    </div>
   </footer>  
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+<script src="./libs/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="./libs/jquery.min.js"></script>
+<script type="text/javascript" src="./libs/slick.min.js"></script>
 <script src="./js/docslide.js"></script>
 <script src="./js/testimonial.js"></script>
 <script src="./js/validate.js"></script>
